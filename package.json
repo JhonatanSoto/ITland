@@ -1,0 +1,38 @@
+{
+  "name": "itland",
+  "version": "1.0.0",
+  "description": "Equipo 1 - DH\r Integrantes del Grupo: Breve descripción\r •\tPedro Aznarez: 23 años, Montevideo, Uruguay.\r •\tMicaela Bustos: 28 años, Diseñadora UX, Buenos Aires, Argentina\r •\tAntonella Cappellari: Ingeniera Industrial, 30 años, Capital federal, Buenos Aires, Argentina.\r •\tRomina Jaime: 42 años, Administrativa y Profesora de Yoga, Buenos Aires, Argentina\r •\tJhonatan Soto: 20 años, Buenos Aires, Argentina.\r •\tMa. Josefina Cisternas Martinotti: Enfermera, 35 años, Santiago de Chile.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "start": "node  src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antocappellari/ITLand.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antocappellari/ITLand/issues"
+  },
+  "homepage": "https://github.com/antocappellari/ITLand#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.15.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "node-fetch": "^3.3.1",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}

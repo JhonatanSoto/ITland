@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- heade -->
+<%- include('../partials/head') %>
+
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+      <main class="main-form">
+        <div class="container-form">
+          <div class="text-title">
+            <p>Update profile</p>
+          </div>
+          <form class="form-inputs" action="/users/update/<%= locals.userToLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="datauser__register">
+              <div class="userinput">
+                <input type="text" name="first_name" id="" value="<%= locals.userToLogged.first_name %>"
+                  placeholder="Name">
+
+                <i class="uil uil-user icon1"></i>
+                <% if (locals.errors && errors.name) { %>
+                  <p class="text-danger">
+                    <%= errors.name.msg %>
+                  </p>
+                  <% } %>
+              </div>
+              <div class="userinput">
+                <input type="text" name="last_name" value="<%= locals.userToLogged.last_name %>"
+                  placeholder="Last name">
+                <% if (locals.errors && errors.lastname) { %>
+                  <p class="text-danger">
+                    <%= errors.lastname.msg %>
+                  </p>
+                  <% } %>
+                    <i class="uil uil-user icon1"></i>
+              </div>
+              <div class="userinput">
+                <input type="text" placeholder="Address" name="address" value="<%= locals.userToLogged.address %>">
+                <% if (locals.errors && errors.address) { %>
+                  <p class="text-danger">
+                    <%= errors.address.msg %>
+                  </p>
+                  <% } %>
+                    <i class="uil uil-location-point"></i>
+              </div>
+              <div class="userinput">
+                <input type="number" name="cell" value="<%= locals.userToLogged.cell %>" placeholder="cel:">
+                <% if (locals.errors && errors.cellphone) { %>
+                  <p class="text-danger">
+                    <%= errors.cellphone.msg %>
+                  </p>
+                  <% } %>
+                    <i class="uil uil-phone"></i>
+              </div>
+            </div>
+            <div class="file-select2" id="src-file2">
+              <input type="file" name="image">
+              <% if (locals.errors && errors.image) { %>
+                <p class="text-danger">
+                  <%= errors.image.msg %>
+                </p>
+                <% } %>
+            </div>
+            <% if (locals.errors && errors.conditions) { %>
+              <p class="text-danger">
+                <%= errors.conditions.msg %>
+              </p>
+              <% } %>
+                <div class="userinput button-submit">
+                  <input class="input-button" type="Submit" value="update">
+                </div>
+              </form>
+        </div>
+      </main>
+      <!-- Bottom NAv -->
+      <%- include('../partials/bottomNav') %>
+        <!-- Footer -->
+        <%- include('../partials/footer') %>
+  </body>
+
+</html>

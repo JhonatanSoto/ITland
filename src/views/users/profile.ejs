@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('../partials/head') %> 
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %> 
+
+
+    <main class="main__profile">
+        <div class="userProfile">
+          <div class="userImage">
+          <img width="100px" src="/images/users/<%= userToLogged.image %>" alt="">
+        </div>
+        <div class="userButtons">
+          <a href="/users/update/<%= userToLogged.id %>"><button type="button"
+            class="userButton">Edit profile</button></a>
+          <form action="/users/delete/<%= userToLogged.id %>?_method=DELETE" method="post">
+            <button class="userButton" type="submit">Delete</button>
+          </form>
+        </div>
+        </div>
+        <div class="userMainInfo">
+          <p>Full name: <%= userToLogged.first_name %> <%= userToLogged.last_name %></p> 
+          <p><%= userToLogged.image %></p>
+          <hr>
+          <p>Address: <%= userToLogged.address %> </p>
+          <hr>
+          <p>Cellphone: <%= userToLogged.cell %> </p>
+          <hr>
+          <p>Email: <%= userToLogged.email %> </p>
+        </div>
+        <div class="userOrders">
+       <div>
+        <p>My orders</p>
+       </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- Bootom Nav -->
+    <%- include('../partials/bottomNav') %> 
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<section class="section__nav__mobile">
+    <ul>
+        <li class="nav__mobile__caja">
+            <a href="/"><i class="uil uil-home"></i></a>
+        </li>
+        <li class="nav__mobile__caja">
+            <a id="search"><i class="uil uil-search"></i></a>
+        </li>
+        <li class="nav__mobile__caja">
+            <a href="/products/cart"><i class="uil uil-shopping-cart"></i></a>
+        </li>
+       
+        <li class="nav__mobile__caja">
+            <% if (locals.isLogged) { %>
+                <a class="imageContainer" href="/users/profile">
+                    <img class="imageProfile" src="/images/users/<%= userToLogged.image %>" alt="">
+                </a>
+                <% } else{ %>
+                    <a class="imageContainer" href="/users/login">
+                        <i class="uil uil-user"></i>
+                    </a>
+                    <% } %>
+        </li>
+    </ul>
+</section>

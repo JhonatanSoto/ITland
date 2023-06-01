@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/formProduct.css" />
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+      <main class="main-form">
+        <div class="container-form">
+          <h2 class="form-title">Create Product</h2>
+
+          <!-- <--------FORMULARIO--------->
+
+          <form class="form-inputs" action="/products/create" method="POST" enctype="multipart/form-data">
+            <div class="userinput" id="name-error">
+              <input type="name" class="inputJs" name="name" placeholder="Product Name"
+                value="<%= locals.oldBody? oldBody.name: null %>">
+              <% if (locals.errors && errors.name) { %>
+                <p class="text-danger">
+                  <%= errors.name.msg %>
+                </p>
+                <% } %>
+                <p class="text-danger error">Please complete with the product's name</p>
+            </div>
+            <div class="userinput" id="description-error">
+              <textarea name="description" id="" cols="30" rows="10" class="inputJs"><%= locals.oldBody? oldBody.description: null %></textarea>
+              <% if (locals.errors && errors.description) { %>
+                <p class="text-danger">
+                  <%= errors.description.msg %>
+                </p>
+                <% } %>
+                <p class="text-danger error">Please complete with the product's description</p>
+            </div>
+            <div>
+              <div class="file-select" >
+                <input type="file" name="image" id="files" multiple>
+              </div>
+              <% if (locals.errors && errors.image) { %>
+                <p class="text-danger">
+                  <%= errors.image.msg %>
+                </p>
+                <% } %>
+                <p class="text-danger error">Please upload a picture with a valid format [jpg-png-webp-jfif]</p>
+            </div>
+            <div class="userinput " id="category-error">
+              <label>Category</label>
+              <select class="drop-down d-1 category" name="category_id">
+                <option disabled selected>Choose an option</option>
+                <% if (locals.oldBody && oldBody.category_id) { %>
+                  <% categories.forEach(category => { %>
+                    <% if (category.id == oldBody.category_id) { %>
+                        <option value="<%= oldBody.category_id %>" selected >
+                          <%= category.name %>
+                        </option>
+                    <%}%>
+                 <% }) %>
+                  
+                <% } else{ %>
+                <% categories.forEach(category=> { %>
+                  <option value="<%= category.id %>">
+                    <%= category.name %>
+                  </option>
+                  <% }) %>
+                <% }%>
+
+              </select>
+              <% if (locals.errors && errors.category_id) { %>
+                <p class="text-danger">
+                  <%= errors.category_id.msg %>
+                </p>
+                <% } %>
+                <p class="text-danger error">Please select a category</p>
+            </div>
+            <div class="userinput" id="sub_category-error">
+              <label class="labelProducts">Sub Category</label>
+              <select class="drop-down d-1" name="sub_category_id">
+                <option disabled selected>Choose an option</option>
+                <% if (locals.oldBody && oldBody.sub_category_id) { %>
+                  <% sub_categories.forEach(sub_category => { %>
+                    <% if (sub_category.id == oldBody.sub_category_id) { %>
+                        <option value="<%= oldBody.sub_category_id %>" selected >
+                          <%= sub_category.name %>
+                        </option>
+                    <%}%>
+                 <% }) %>
+                  
+                <% } else{ %>
+                <% sub_categories.forEach(sub_category=> { %>
+                  <option value="<%= sub_category.id %>">
+                    <%= sub_category.name %>
+                  </option>
+                  <% }) %>
+                <% }%>
+              </select>
+              <% if (locals.errors && errors.sub_category_id) { %>
+                <p class="text-danger">
+                  <%= errors.sub_category_id.msg %>
+                </p>
+                <% } %>
+                <p class="text-danger error">Please select a sub-category</p>
+            </div>
+            <div class="userinput" id="color-error">
+              <label class="labelProducts" for="">Colors</label>
+            <select class="drop-down d-1" name="color_id">
+              <option disabled selected>Choose an option</option>
+              <% if (locals.oldBody && oldBody.color_id) { %>
+                <% colors.forEach(color => { %>
+                  <% if (color.id == oldBody.color_id) { %>
+                      <option value="<%= oldBody.color_id %>" selected >
+                        <%= color.color %>
+                      </option>
+                  <%}%>
+               <% }) %>
+                
+              <% } else{ %>
+              <% colors.forEach(color=> { %>
+                <option value="<%= color.id %>">
+                  <%= color.color %>
+                </option>
+                <% }) %>
+              <% }%>
+            </select>
+            <p class="text-danger error">Please select a color</p>
+          </div>
+            <% if (locals.errors && errors.color_id) { %>
+              <p class="text-danger">
+                <%= errors.color_id.msg %>
+              </p>
+              <% } %>
+
+            </select>
+            <div class="userinput " id="memory">
+              <label>Internal Storage</label>
+              <select class="drop-down " name="memory_id">
+                <option disabled selected>Choose an option</option>
+                <% memories.forEach(memory=> { %>
+                    <option value="<%= memory.id %>">
+                      <%= memory.memory %>
+                    </option>
+                      <% }) %>
+              </select>
+            </div>
+            <div class="userinput " id="ram">
+              <label>RAM memory</label>
+              <select class="drop-down" name="ram_id">
+                <option disabled selected>Choose an option</option>
+                <% rams.forEach(ram=> { %>
+                    <option value="<%= ram.id %>">
+                      <%= ram.ram %>
+                    </option> 
+                      <% }) %>
+              </select>
+            </div>
+            <div class="userinput" id="brand-error">
+              <label class="labelProducts">Brands</label>
+              <select class="drop-down d-1" name="brand_id">
+                <option disabled selected>Choose an option</option>
+                <% if (locals.oldBody && oldBody.brand_id) { %>
+                    <% brands.forEach(brand => { %>
+                     <% if (brand.id == oldBody.brand_id) { %>
+                        <option value="<%= brand.id %>" selected>
+                          <%= brand.name %>
+                        </option>
+                     <% } %>
+                    <% }) %>
+                  <% } else{%>
+                    <% brands.forEach(brand=> { %>
+                      <option value="<%= brand.id %>">
+                        <%= brand.name %>
+                      </option>
+                      <% }) %>
+                    <% }%>
+              </select>
+              <% if (locals.errors && errors.brand_id) { %>
+                <p class="text-danger">
+                  <%= errors.brand_id.msg %>
+                </p>
+              <% } %>
+              <p class="text-danger error">Please select a brand</p>
+            </div>
+            <div class="userinput " id="camera">
+              <label>Cameras</label>
+              <select class="drop-down d-1" name="camera_id">
+                <option disabled selected>Choose an option</option>
+                <% if (locals.oldBody && oldBody.camera_id) { %>
+                 <% cameras.forEach(camera => { %>
+                  <% if (camera.id == oldBody.camera_id) { %>
+                   <option value="<%= camera.id %>" selected>
+                    <%= camera.resolution %>
+                  </option>
+                  <% } %>
+                 <% }) %>
+
+                <% } else {%>
+                  <% cameras.forEach(camera=> { %>
+                    <option value="<%= camera.id %>">
+                      <%= camera.resolution %>
+                    </option>
+                    <% }) %>
+                  <% } %>
+              </select>
+              <% if (locals.errors && errors.camera_id) { %>
+                <p class="text-danger">
+                  <%= errors.camera_id.msg %>
+                </p>
+                <% } %>
+              <p class="text-danger error">Please select a camera</p>
+
+            </div>
+
+           
+            <div class="userinput" id="price-error">
+              <label class="labelProducts">Price</label>
+              <input type="number" class="inputJs" name="price" placeholder="Product Price">
+              <%if(locals.errors && errors.price){ %>
+                <p class="text-danger">
+                  <%= errors.price.msg %>
+                </p>
+
+              <% } %>
+              <p class="text-danger error">Please complete with the product's price</p>
+            </div>
+            <div class="userinput">
+              <label class="labelProducts">Discount</label>
+              <input type="number" name="discount" placeholder="Product Discount">
+            </div>
+            <div class="userinput" id="stock-error">
+              <label class="labelProducts">Stock</label>
+              <input type="number" class="inputJs"name="stock" placeholder="Stock">
+              <% if (locals.errors && errors.stock) { %>
+                <p class="text-danger">
+                  <%= errors.stock.msg %>
+                </p>
+              <% } %>
+              <p class="text-danger error">Please complete with the product's stock</p>
+            </div>
+            <div class="button-create-product">
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Submit">
+              </div>
+              <div class="userinput button-submit">
+                <input class="input-button" type="Submit" value="Reset">
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <script src="/JS/js-front-product.js"></script>
+  </body>
+
+</html>

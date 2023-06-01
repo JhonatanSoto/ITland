@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('../partials/head') %> 
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %> 
+    <main class="main-form ">
+      <div class="container-form container__form-login">
+       <div class="text-title">
+        <h2>Welcome</h2>
+        <p>Login</p>
+       </div>
+        <form class="form-inputs" action="/users/login" method="post">
+          <div class="userinput">
+            <input type="text" placeholder="Enter your e-mail" name="email">
+            <i class="uil uil-user"></i>
+            <% if (locals.errors && errors.email) { %>
+              <p class="text-danger"> <%= errors.email.msg %></p>
+            <% } %>
+          </div>
+          <div class="userinput">
+            <input type="password" placeholder="Enter your password" name = "password">
+            <% if (locals.errors && errors.password) { %>
+              <p class="text-danger"> <%= errors.password.msg %></p>
+            <% } %>
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw icon5"></i>
+          </div>
+          <div class="conditions">
+            <input type="checkbox" checked="checked" name="remember">
+            <p>Remember me</p>
+          </div>
+          <div class="button-submit">
+            <input class="input-button" type="Submit" value="Log in" />
+          </div>
+          <div class="text">
+            <p>You don't have an account? <a href="/users/register">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- Bootom Nav -->
+    <%- include('../partials/bottomNav') %> 
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 
+  </body>
+</html>

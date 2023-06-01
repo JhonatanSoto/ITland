@@ -1,0 +1,107 @@
+.main__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px;
+    background-color: #ebebee;
+    padding: 20px;
+}
+.userProfile {
+  background-color: white;
+  width:100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 10px;
+
+}
+.userImage {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    object-fit: contain;
+}
+.userButtons{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    width:100%;
+}
+.userButtons a{
+    width:50%;
+
+}
+.userButtons form{
+    width:50%;
+
+}
+
+.userMainInfo {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    
+}
+.userMainInfo p {
+    font-size: 0.8em;
+}
+.userOrders{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+
+}
+.userButton {
+    background-color: #1d2d44;;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:10px 20px 10px 20px;
+    font-size: 17px;
+    transition-duration: 0.4s;
+    width:100%;
+    height:100%;
+    font-size: 0.7em;
+}
+.userButton:hover {
+    background-color:#3e5c76;  }
+
+@media screen and (min-width:767px){
+
+.userMainInfo p {
+    font-size: 1em;
+}
+.main__profile {
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.userProfile {
+    width:100%;  
+  }
+.userMainInfo {
+    width:100%;
+}
+.userOrders{
+    width:100%;
+}
+.userImage img{
+    width: 100%;
+}
+}

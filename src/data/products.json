@@ -1,0 +1,64 @@
+[
+ {
+  "id": 1677204722857,
+  "name": "Samsung A03",
+  "description": "",
+  "category": "oferts",
+  "subcategory": "oferts",
+  "brand": "Samsung",
+  "color": "white",
+  "memory": "128",
+  "height": "155",
+  "length": "74",
+  "width": "7",
+  "price": "111987",
+  "discount": "23",
+  "images": [
+   "image-1677357739145-.webp",
+   "image-1677357739147-.webp",
+   "image-1677357739148-.webp",
+   "image-1677357739148-.jpg",
+   "image-1677357739149-.webp"
+  ]
+ },
+ {
+  "id": 1677204959245,
+  "name": "Motorola G22",
+  "description": "",
+  "category": "oferts",
+  "subcategory": "oferts",
+  "brand": "Motorola",
+  "color": "black",
+  "memory": 128,
+  "height": 155.7,
+  "length": 74.5,
+  "width": 7.9,
+  "price": "14500",
+  "discount": "23",
+  "images": [
+   "image-1677205126301-.jpg",
+   "image-1677205126304-.jpg",
+   "image-1677205126320-.webp",
+   "image-1677205126321-.jpg",
+   "image-1677205126333-.webp"
+  ]
+ },
+ {
+  "id": 1677943031509,
+  "name": "",
+  "description": "",
+  "category": "",
+  "subcategory": "",
+  "brand": "",
+  "color": "black",
+  "memory": "",
+  "height": "",
+  "length": "",
+  "width": "",
+  "price": "",
+  "discount": "",
+  "images": [
+   "image-1677943030918-.jpg"
+  ]
+ }
+]

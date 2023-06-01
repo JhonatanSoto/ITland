@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.name-product i{
+    display: none;
+}
+
+/* -----------body----------- */
+
+.name-product{
+    margin: 10px 0 20px 10px;
+}
+.name-product p{
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.name-container{
+    padding-left:20px;
+}
+.section__images{
+    display:flex;
+    flex-direction:column;
+}
+.image-others{
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
+.image-others img{
+    width:12%;
+    padding:1px;
+    margin:5px;
+}
+
+.image-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.image-container img{
+    width: 70%;
+
+}
+.image-container p{
+    left: 10px;
+    top: -10px;
+    position: absolute;
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+}
+/* --------carracteristicas y botones-------- */
+.container-charac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.characterisrics-memory-color{
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 4px;
+    background-color: #f1eeeea1;
+}
+.characterisrics-memory-color .p1{
+    color: gray;
+}
+.characterisrics-memory-color .p2{
+    font-weight: bold;
+}
+.characterisrics-memory-color i{
+    color: #164ffacf;
+}
+.section__characteristics .previous{
+    text-decoration: line-through;
+    padding-left: 10px;
+    font-size: 1.4em;
+    color: gray;
+}
+.section__characteristics .oferts{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.section__characteristics .price{
+    color: #164ffacf;
+    font-weight: 700;
+    font-size: 2em;
+}
+.section__characteristics .discount{
+    color: #fff;
+    background-color:#00a650;
+    padding: 3px 3px 3px 5px;
+    border-radius: 5px;
+}
+.section__characteristics .payment-methods{
+    padding-left:10px;
+    text-decoration: none;
+    color: #00a650;
+    font-weight: 700;
+}
+.freeshipping{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 0 10px;
+}
+.freeshipping svg{
+    width: 1.3em;
+    height: 1.3em;
+    color: #164ffacf;
+}
+.article-button{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.article-button button{
+    width: 36%;
+    height: 7vh;
+}
+.article-button .btn1{
+    background-color: #0D1321;;
+    border-radius:5px;
+    border: none;
+    color: #Fff;
+    cursor: pointer;
+}
+.swiper-detail{
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+    height: 350px;
+}
+.slide-image{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+.slide-image img{
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+}
+.swiper-pagination{
+    margin-top: 20px !important;
+}
+.article-button .btn2{
+    background-color: #2c2e33;
+    border-radius:5px;
+    cursor: pointer;
+}
+.section__description {
+    margin-top: 20px;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* box-shadow: 1px 1px 5px #2c2e33; */
+    border-radius: 4px;
+    height: 350px;
+    position: relative;
+    z-index: 34;
+}
+.description{
+    /* position:absolute; */
+    border: 1px rgb(163, 162, 162) solid;
+    padding: 10px 10px 0 10px;
+    background: #f7f7f7;
+    z-index: 32;
+}
+
+.description-buttonbtn-description{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+
+.btn-description{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pDes{
+    max-height: 216px;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+.pDes.descriptionAnimaction{
+    max-height: 1000px
+    /* transform: scaleY(500px); */
+
+}
+.btn-seemore{
+    width: 70%;
+    background-color: #0D1321;
+    color: #fff;
+    padding: 1em 3em;
+}
+
+
+.section__description .description{
+    width: 80%;
+    padding: 10px;
+}
+.section__description .description h4{
+    padding-bottom: 10px;
+    margin-left: 2px;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+/* .description .btn1{
+    margin-top:10px;
+    background-color: #164ffacf;
+    width:100%;
+    height: 30px;
+    border-radius:5px;
+    border: none;
+    color: #Fff;
+    cursor: pointer;
+}
+.description-buttons .btn1{
+    width:10em;
+    height: 3em;
+}
+.description-buttons .btn1:hover{
+    background-color: #0040ffcf;
+}
+.article-button .btn1:hover{
+    color: #fff;
+    background-color: #0040ffcf;
+    border: none;
+}
+.article-button .btn2:hover{
+    color: #Fff;
+    background-color: #0040ffcf;
+    border:none
+} */
+
+/*--------------------Tablet--------------------- */
+@media screen and (min-width:767px) and (max-width:1023px){
+    .main-container{
+        width: 95%;
+        display:grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 1fr;
+    }
+    .section__description{
+        grid-column: 1/3;
+        width: 100%;
+        margin-left: 35px;
+        height: auto;
+    }
+    .article-button{
+        position: relative;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .image-others{
+        justify-content:space-around;
+    }
+    .image-others img{
+        width:20%;
+        padding:1px;
+    }
+    /* .article-button .btn1{
+        width: 70%;
+        background-color: #164ffacf;
+        border-radius:5px;
+        border: none;
+        color: #Fff;
+        cursor: pointer;
+    }
+    .article-button .btn2{
+        width: 70%;
+        background-color: #fff;
+        border-radius:5px;
+        border: 1px solid #164ffacf;
+        color: #164ffacf;
+        cursor: pointer;
+    } */
+    .article-button i{
+        position: absolute;
+        top :-20px;
+        right: 10px;
+        font-size: 20px;
+    }
+
+}
+/* -----------------------Desktop---------------- */
+@media screen and (min-width:1024px) {
+    .main-container{
+        margin-top: 20px;
+        width: 97%;
+        display:grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-template-rows: 1fr;
+
+    }
+    main h2{
+        display: block;
+    }
+    .image-others{
+        justify-content:space-around;
+    }
+    .image-others img{
+        width:20%;
+        padding:1px;
+    }
+    .name-product{
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+    }
+    .name-product i{
+        display:block;
+        margin-left:10px;
+        font-size:1.25rem;
+    }
+    .name-product i:hover{
+        color: #164ffacf;
+    }
+    .article-button{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .article-button i{
+        display: none;
+    }
+    .article-button button{
+        width: 100%;
+        background-color: #3a445a55;
+        border-radius:5px;
+        border: none;
+        color: #Fff;
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .article-button .btn1:hover{
+        color: #fff;
+        background-color:#2c2e33;
+        border: none;
+    }
+    .article-button .btn2:hover{
+        color: #Fff;
+        border:none;
+        background-color: #0D1321;;
+        
+    }
+    .description__freeshipping{
+        display: block;
+    }
+    .freeshipping{
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 0 10px;
+    }
+    .freeshipping svg{
+        width: 1.3em;
+        height: 1.3em;
+        color: #164ffacf;
+    }
+    .section__characteristics{
+        margin: 10px;
+    }
+    .section__description{
+        width: 100%;
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+        margin: auto;
+    }
+    .main__input{
+        display:block;
+    }
+}
